@@ -23,7 +23,6 @@ public class JobTest {
     private Job job6;
     private Job job7;
 
-
     @Before
     public void createJob() {
         job1 = new Job();
@@ -64,21 +63,21 @@ public class JobTest {
     }
 
     @Test
-    public void testLabelForEachField() {
+    public void testStringShouldContainLabelForEachField() {
         assertEquals("\n" +
-                "Id: 17\n" +
-                "Name: Product tester\n" +
-                "Employer: ACME\n" +
-                "Location: Desert\n" +
-                "Position Type: Quality control\n" +
-                "Core Competency: Persistence\n",
-                job3.toString());
+                "Id: " +  job4.getId() + "\n" +
+                "Name: Web Developer\n" +
+                "Employer: LaunchCode\n" +
+                "Location: St. Louis\n" +
+                "Position Type: Front-end developer\n" +
+                "Core Competency: JavaScript\n",
+                job4.toString());
     }
 
     @Test
     public void testEmptyField() {
         assertEquals("\n" +
-                "Id: 6\n" +
+                "Id: " +  job6.getId() + "\n" +
                 "Name: Ice cream tester\n" +
                 "Employer: Data not available\n" +
                 "Location: Home\n" +
@@ -87,9 +86,9 @@ public class JobTest {
                 job6.toString());
     }
 
-//    @Test
-//    public void testAllFieldsEmptyExceptId() {
-//        assertEquals("OOPS! This job does not seem to exist.", job7.toString());
-//    }
+    @Test
+    public void testAllFieldsEmptyExceptId() {
+        assertEquals("OOPS! This job does not seem to exist", job7.toString());
+    }
 
 }
