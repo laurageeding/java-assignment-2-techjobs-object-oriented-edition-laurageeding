@@ -56,4 +56,5 @@ public class CoreCompetency extends JobField{
 //    public int getId() {
 //        return id;
 //    }
+
 }

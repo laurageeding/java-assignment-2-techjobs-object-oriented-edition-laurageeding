@@ -75,7 +75,7 @@ public class JobTest {
     }
 
     @Test
-    public void testEmptyField() {
+    public void testForEmptyField() {
         assertEquals("\n" +
                 "Id: " +  job6.getId() + "\n" +
                 "Name: Ice cream tester\n" +
