@@ -66,11 +66,11 @@ public class JobTest {
     public void testStringShouldContainLabelForEachField() {
         assertEquals("\n" +
                 "Id: " +  job4.getId() + "\n" +
-                "Name: Web Developer\n" +
-                "Employer: LaunchCode\n" +
-                "Location: St. Louis\n" +
-                "Position Type: Front-end developer\n" +
-                "Core Competency: JavaScript\n",
+                "Name: " +  job4.getName() + "\n" +
+                "Employer: " +  job4.getEmployer().getValue() + "\n" +
+                "Location: " +  job4.getLocation().getValue() + "\n" +
+                "Position Type: " +  job4.getPositionType().getValue() + "\n" +
+                "Core Competency: " +  job4.getCoreCompetency().getValue() + "\n" ,
                 job4.toString());
     }
 
@@ -78,11 +78,11 @@ public class JobTest {
     public void testForEmptyField() {
         assertEquals("\n" +
                 "Id: " +  job6.getId() + "\n" +
-                "Name: Ice cream tester\n" +
-                "Employer: Data not available\n" +
-                "Location: Home\n" +
-                "Position Type: UX\n" +
-                "Core Competency: Tasting ability\n" ,
+                "Name: " +  job6.getName() + "\n" +
+                "Employer: Data not available" + "\n" +
+                "Location: " +  job6.getLocation().getValue() + "\n" +
+                "Position Type: " +  job6.getPositionType().getValue() + "\n" +
+                "Core Competency: " +  job6.getCoreCompetency().getValue() + "\n" ,
                 job6.toString());
     }
 
